@@ -1,0 +1,17 @@
+{
+    "requests": [
+        {
+            "Request_ID": "REQ000001",
+            "Customer_ID": "C000001",
+            "Account_Number": "201001020001",
+            "Request_Type": "CHEQUE_DEPOSIT",
+            "Cheque_Number": "CHQ20260711",
+            "Amount": "50000",
+            "Cheque_Date": "11-07-2026",
+            "Request_Date": "11-07-2026 01:50:19 AM",
+            "Status": "APPROVED",
+            "Admin_Remark": "Approved",
+            "Completed_Date": "11-07-2026 02:05:19 AM"
+        }
+    ]
+}

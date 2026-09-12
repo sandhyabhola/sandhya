@@ -1,0 +1,92 @@
+{
+    "transactions": [
+        {
+            "Transaction_ID": "TXN000001",
+            "Customer_ID": "C000001",
+            "Account_Number": "101001010002",
+            "Type": "DEPOSIT",
+            "Method": "CASH",
+            "Amount": "1000",
+            "Status": "SUCCESS",
+            "Balance_Before": "1000",
+            "Balance_After": "2000",
+            "Time_Stamp": "11-07-2026 12:11:06 AM"
+        },
+        {
+            "Transaction_ID": "TXN000004",
+            "Customer_ID": "C000001",
+            "Account_Number": "101001010002",
+            "Type": "WITHDRAW",
+            "Method": "UPI",
+            "Amount": "400",
+            "Status": "SUCCESS",
+            "Balance_Before": "2000",
+            "Balance_After": "1600",
+            "Time_Stamp": "11-07-2026 12:49:22 AM",
+            "UPI_ID": "kiran123@axl"
+        },
+        {
+            "Transaction_ID": "TXN000005",
+            "Customer_ID": "C000001",
+            "Account_Number": "201001020001",
+            "Type": "DEPOSIT",
+            "Method": "UPI",
+            "Amount": "2000",
+            "Status": "SUCCESS",
+            "Balance_Before": "500",
+            "Balance_After": "2500",
+            "Time_Stamp": "11-07-2026 01:19:13 AM",
+            "UPI_ID": "priya.k@oksbi"
+        },
+        {
+            "Transaction_ID": "TXN000007",
+            "Sender_Name": "Parapati Gayatri",
+            "Sender_Account_Number": "201001020001",
+            "Receiver_Name": "Parapati Gayatri",
+            "Receiver_Account_Number": "101001010002",
+            "Amount": "500",
+            "Type": "TRANSFER",
+            "Status": "SUCCESS",
+            "Sender_Balance_After_Transfer": "2000",
+            "Receiver_Balance_After_Transfer": "2100",
+            "Time_Stamp": "11-07-2026 01:40:46 AM"
+        },
+        {
+            "Transaction_ID": "TXN000008",
+            "Customer_ID": "C000001",
+            "Account_Number": "201001020001",
+            "Type": "DEPOSIT",
+            "Method": "CHEQUE",
+            "Amount": "50000",
+            "Status": "SUCCESS",
+            "Balance_Before": "2000",
+            "Balance_After": "52000",
+            "Time_Stamp": "11-07-2026 02:05:19 AM"
+        },
+        {
+            "Transaction_ID": "TXN000009",
+            "Customer_ID": "C000002",
+            "Account_Number": "301001010001",
+            "Type": "DEPOSIT",
+            "Method": "CASH",
+            "Amount": "1000",
+            "Status": "SUCCESS",
+            "Balance_Before": "5000",
+            "Balance_After": "6000",
+            "Time_Stamp": "27-07-2026 12:54:45 PM"
+        },
+        {
+            "Transaction_ID": "TXN000010",
+            "Customer_ID": "C000002",
+            "Account_Number": "301001010001",
+            "Type": "WITHDRAW",
+            "Method": "UPI",
+            "Amount": "1000",
+            "Status": "SUCCESS",
+            "Balance_Before": "6000",
+            "Balance_After": "5000",
+            "Time_Stamp": "27-07-2026 01:12:21 PM",
+            "UPI_ID": "priya.k@oksbi"
+        }
+    ]
+}

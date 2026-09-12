@@ -1,0 +1,139 @@
+{
+    "configuration": {
+        "banks": {
+            "Horizon_Bank": {
+                "Bank_Code": 101,
+                "branches": {
+                    "Hyderabad": {
+                        "Branch_Code": "001",
+                        "account_types": {
+                            "Savings": {
+                                "Account_Type_Code": "01",
+                                "Next_Account_Sequence": 3
+                            },
+                            "Current": {
+                                "Account_Type_Code": "02",
+                                "Next_Account_Sequence": 1
+                            }
+                        }
+                    },
+                    "Vijayawada": {
+                        "Branch_Code": "002",
+                        "account_types": {
+                            "Savings": {
+                                "Account_Type_Code": "01",
+                                "Next_Account_Sequence": 1
+                            },
+                            "Current": {
+                                "Account_Type_Code": "02",
+                                "Next_Account_Sequence": 1
+                            }
+                        }
+                    }
+                }
+            },
+            "Unity_Bank": {
+                "Bank_Code": 201,
+                "branches": {
+                    "Bangalore": {
+                        "Branch_Code": "001",
+                        "account_types": {
+                            "Savings": {
+                                "Account_Type_Code": "01",
+                                "Next_Account_Sequence": 2
+                            },
+                            "Current": {
+                                "Account_Type_Code": "02",
+                                "Next_Account_Sequence": 2
+                            }
+                        }
+                    }
+                }
+            },
+            "Nova_Bank": {
+                "Bank_Code": 301,
+                "branches": {
+                    "Chennai": {
+                        "Branch_Code": "001",
+                        "account_types": {
+                            "Savings": {
+                                "Account_Type_Code": "01",
+                                "Next_Account_Sequence": 2
+                            },
+                            "Current": {
+                                "Account_Type_Code": "02",
+                                "Next_Account_Sequence": 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "system": {
+        "next_customer_id": 3,
+        "next_transaction_id": 11,
+        "next_transfer_id": 1,
+        "next_request_id": 2,
+        "next_notification_id": 2
+    },
+    "customers": [
+        {
+            "Customer_ID": "C000001",
+            "Full_Name": "Parapati Gayatri",
+            "Phone_Number": "9491988848",
+            "Email": "gayatri2004@gmail.com",
+            "Address": "AndhraPradesh,532312",
+            "PIN": "2223",
+            "Created_Date": "10-07-2026 10:31:05 PM",
+            "Last_Login": "11-07-2026 01:59:12 AM",
+            "Account_Status": "ACTIVE"
+        },
+        {
+            "Customer_ID": "C000002",
+            "Full_Name": "parapatigayatri",
+            "Phone_Number": "9123456976",
+            "Email": "gayatri2004@gmail.com",
+            "Address": "andrapreadesh",
+            "PIN": "1234",
+            "Created_Date": "27-07-2026 12:50:34 PM",
+            "Last_Login": "27-07-2026 01:12:02 PM",
+            "Account_Status": "ACTIVE"
+        }
+    ],
+    "accounts": [
+        {
+            "Customer_ID": "C000001",
+            "Bank_Name": "Horizon_Bank",
+            "Branch_Name": "Hyderabad",
+            "Account_Type": "Savings",
+            "Account_Number": "101001010002",
+            "Balance": "2100",
+            "Created_Date": "10-07-2026 10:31:05 PM",
+            "Last_Updated": "11-07-2026 01:40:46 AM",
+            "Account_Status": "ACTIVE"
+        },
+        {
+            "Customer_ID": "C000001",
+            "Bank_Name": "Unity_Bank",
+            "Branch_Name": "Bangalore",
+            "Account_Type": "Current",
+            "Account_Number": "201001020001",
+            "Balance": "52000",
+            "Created_Date": "11-07-2026 01:16:46 AM",
+            "Last_Updated": "11-07-2026 02:05:19 AM",
+            "Account_Status": "ACTIVE"
+        },
+        {
+            "Customer_ID": "C000002",
+            "Bank_Name": "Nova_Bank",
+            "Branch_Name": "Chennai",
+            "Account_Type": "Savings",
+            "Account_Number": "301001010001",
+            "Balance": "5000",
+            "Created_Date": "27-07-2026 12:50:34 PM",
+            "Last_Updated": "27-07-2026 01:12:21 PM",
+            "Account_Status": "ACTIVE"
+        }
+    ]
+}

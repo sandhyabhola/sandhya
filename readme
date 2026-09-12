@@ -1,0 +1,1155 @@
+# 🏦 Bank Management System
+
+> A complete **Console-Based Bank Management System** developed in **Python** using **Object-Oriented Programming (OOP)** concepts and **JSON** as the backend database.
+
+---
+
+## 📖 Project Overview
+
+The **Bank Management System** is a menu-driven banking application that simulates real-world banking operations through a command-line interface.
+
+The project has been developed entirely in Python following Object-Oriented Programming principles while using JSON files for permanent data storage.
+
+The system provides two different user roles:
+
+- 👤 Customer
+- 👨‍💼 Administrator
+
+Customers can register, log in securely, manage multiple bank accounts, perform banking transactions, submit service requests, and receive notifications.
+
+Administrators can securely log in and manage customers, accounts, transactions, and customer requests.
+
+The project was developed as a backend-focused learning project to understand how real banking systems are designed without relying on SQL databases.
+
+---
+
+# 🎯 Objectives
+
+The main objectives of this project are:
+
+- Learn Object-Oriented Programming
+- Understand real-world banking workflow
+- Practice JSON as a lightweight database
+- Implement secure banking operations
+- Learn file handling
+- Build a complete backend application
+- Improve problem-solving skills
+- Practice data validation
+- Understand CRUD operations
+- Design scalable software architecture
+
+---
+
+# ✨ Major Features
+
+## 👤 Customer Portal
+
+✔ Customer Registration
+
+✔ Customer Login
+
+✔ Customer Dashboard
+
+✔ Profile Management
+
+✔ Multiple Account Support
+
+✔ Switch Between Accounts
+
+✔ Deposit Money
+
+✔ Withdraw Money
+
+✔ Transfer Money
+
+✔ View Account Balance
+
+✔ View Transaction History
+
+✔ Notifications
+
+✔ Service Request Center
+
+✔ Change PIN
+
+✔ Logout
+
+---
+
+## 👨‍💼 Administrator Portal
+
+✔ Secure Admin Login
+
+✔ Admin Dashboard
+
+✔ Customer Management
+
+✔ Account Management
+
+✔ Transaction Management
+
+✔ Request Management
+
+✔ Notification Management
+
+✔ Logout
+
+---
+
+# 💳 Banking Services
+
+The application supports various banking services including:
+
+- Cash Deposit
+- UPI Deposit
+- Cash Withdrawal
+- UPI Withdrawal
+- Cheque Deposit Request
+- Cheque Withdrawal Request
+- Money Transfer
+- Balance Inquiry
+- Transaction History
+
+---
+
+# 📋 Customer Services
+
+Customers can submit service requests for:
+
+- Phone Number Change
+- Address Change
+- Cheque Deposit
+- Cheque Withdrawal
+- Account Closure
+
+Each request is sent to the administrator for approval.
+
+---
+
+# 📨 Notification System
+
+The project includes a complete notification module.
+
+Customers automatically receive notifications whenever:
+
+- Money is deposited
+- Money is withdrawn
+- Money is transferred
+- A request is approved
+- A request is rejected
+- Cheque is approved
+- Cheque is rejected
+- Account status changes
+
+Every notification contains:
+
+- Notification ID
+- Account Number
+- Title
+- Message
+- Status
+- Timestamp
+
+---
+
+# 💰 Deposit Module
+
+Supported methods:
+
+- Cash
+- UPI
+
+The system automatically
+
+- validates amount
+- updates balance
+- stores transaction history
+- generates transaction ID
+- updates timestamp
+- saves data into JSON
+
+---
+
+# 💸 Withdrawal Module
+
+Supported methods:
+
+- Cash
+- UPI
+- Cheque Request
+
+Security validations include:
+
+- Minimum withdrawal amount
+- Minimum account balance
+- Daily withdrawal limit
+- Amount validation
+- Account status validation
+
+---
+
+# 🔄 Money Transfer
+
+The transfer module performs:
+
+- Receiver Account Validation
+- Sender Validation
+- Balance Validation
+- Confirmation Screen
+- Transaction Creation
+- Sender Balance Update
+- Receiver Balance Update
+- Notification Generation
+- Transaction History Storage
+
+---
+
+# 📑 Request Management
+
+Supported Requests
+
+- Phone Number Change
+- Address Change
+- Cheque Deposit
+- Cheque Withdrawal
+- Account Closure
+
+Each request has:
+
+- Request ID
+- Customer ID
+- Account Number
+- Request Type
+- Status
+- Created Date
+- Completed Date
+- Admin Remark
+
+Request Status
+
+- Pending
+- Approved
+- Rejected
+
+---
+
+# 👨‍💼 Admin Management
+
+The administrator can:
+
+### Customer Management
+
+- View All Customers
+- Search Customer by Customer ID
+- Search Customer by Phone Number
+- Search Customer by Email
+
+---
+
+### Account Management
+
+- View All Accounts
+- Search by Account Number
+- Search by Customer ID
+
+---
+
+### Transaction Management
+
+- View Transactions
+- Search Transactions
+- View Customer Transactions
+
+---
+
+### Request Management
+
+- View Pending Requests
+- Approve Requests
+- Reject Requests
+- View Request History
+
+---
+
+# 🔐 Security Features
+
+The project includes multiple validation layers.
+
+Authentication
+
+- Customer ID
+- PIN
+- Admin Login
+
+Input Validations
+
+- Name Validation
+- Phone Number Validation
+- Email Validation
+- Address Validation
+- Amount Validation
+- PIN Validation
+- UPI Validation
+- Menu Choice Validation
+
+Account Validations
+
+- Active Account Check
+- Minimum Balance Check
+- Daily Withdrawal Limit
+- Duplicate Customer Prevention
+- Duplicate Account Prevention
+
+---
+
+# 🗂 Project Structure
+
+```text
+Bank Management System
+│
+├── main.py
+│
+├── accounts.json
+│
+├── transactions.json
+│
+├── requests.json
+│
+├── notifications.json
+│
+├── admin.json
+│
+└── README.md
+```
+
+---
+
+# ⚙ Technologies Used
+
+Programming Language
+
+- Python 3
+
+Database
+
+- JSON
+
+Python Modules
+
+- json
+- os
+- datetime
+- decimal
+- getpass
+- random
+- re
+
+Programming Concepts
+
+- Object-Oriented Programming
+- File Handling
+- JSON Handling
+- Exception Handling
+- Data Validation
+- Menu Driven Programming
+- CRUD Operations
+
+# 🗄 Database Design
+
+The Bank Management System uses **JSON files** as a lightweight database instead of SQL. Each JSON file is responsible for storing a specific type of information, making the project easy to understand while demonstrating backend development concepts.
+
+---
+
+## 📁 accounts.json
+
+This file stores all customer and account information.
+
+### Customer Information
+
+* Customer ID
+* Full Name
+* Phone Number
+* Email
+* Address
+* Created Date
+* Account Status
+
+### Account Information
+
+* Account Number
+* Customer ID
+* Bank Name
+* Branch Name
+* Account Type
+* Current Balance
+* Last Updated
+* Account Status
+
+### System Information
+
+The system automatically maintains counters for generating unique IDs.
+
+Examples:
+
+* Next Customer ID
+* Next Account Number
+* Next Transaction ID
+* Next Notification ID
+* Next Request ID
+
+---
+
+## 📁 transactions.json
+
+Stores every successful banking transaction.
+
+Supported transaction types:
+
+* Deposit
+* Withdrawal
+* Transfer
+
+Each transaction records:
+
+* Transaction ID
+* Customer ID
+* Account Number
+* Transaction Type
+* Transaction Method
+* Amount
+* Transaction Status
+* Balance Before Transaction
+* Balance After Transaction
+* Date & Time
+
+---
+
+## 📁 requests.json
+
+Stores all customer service requests.
+
+Supported request types:
+
+* Phone Number Change
+* Address Change
+* Cheque Deposit
+* Cheque Withdrawal
+* Account Closure
+
+Each request contains:
+
+* Request ID
+* Customer ID
+* Account Number
+* Request Type
+* Current Status
+* Created Date
+* Completed Date
+* Admin Remark
+
+---
+
+## 📁 notifications.json
+
+Stores notifications generated by the system.
+
+Each notification includes:
+
+* Notification ID
+* Customer ID
+* Account Number
+* Notification Title
+* Notification Message
+* Notification Status
+* Related Transaction (if available)
+* Date & Time
+
+---
+
+## 📁 admin.json
+
+Stores administrator details used for authentication and profile management.
+
+Contains:
+
+* System Login ID
+* System Password
+* Administrator Name
+* Role
+* Email
+* Status
+
+---
+
+# 🔄 System Workflow
+
+## Customer Workflow
+
+```text
+Start
+   │
+   ▼
+Customer Portal
+   │
+   ├── Registration
+   │
+   └── Login
+          │
+          ▼
+Customer Dashboard
+          │
+          ├── My Profile
+          ├── Deposit
+          ├── Withdraw
+          ├── Transfer
+          ├── Transaction History
+          ├── Notifications
+          ├── Service Center
+          ├── Switch Account
+          ├── Change PIN
+          └── Logout
+```
+
+---
+
+## Administrator Workflow
+
+```text
+Start
+   │
+   ▼
+Admin Login
+   │
+   ▼
+Admin Dashboard
+   │
+   ├── Profile
+   ├── Customer Management
+   ├── Account Management
+   ├── Transaction Management
+   ├── Request Management
+   |──Notification Management
+   |──Change Password
+   └── Logout
+```
+
+---
+
+# 🔐 Authentication System
+
+The application implements separate authentication for customers and administrators.
+
+## Customer Authentication
+
+The customer logs in using:
+
+* Customer ID
+* PIN
+
+After successful authentication:
+
+* Customer information is loaded.
+* Account information is loaded.
+* Dashboard access is granted.
+
+---
+
+## Administrator Authentication
+
+Administrator login requires:
+
+* System Login ID
+* System Password
+
+Only authorized administrators can access:
+
+* Customer Management
+* Account Management
+* Transaction Management
+* Request Management
+
+---
+
+# ✅ Validation System
+
+To maintain data integrity, the application performs multiple validation checks.
+
+## Personal Information Validation
+
+* Full Name Validation
+* Phone Number Validation
+* Email Validation
+* Address Validation
+
+---
+
+## Financial Validation
+
+* Deposit Amount Validation
+* Withdrawal Amount Validation
+* Transfer Amount Validation
+* Minimum Balance Check
+* Daily Withdrawal Limit
+
+---
+
+## Banking Validation
+
+* Account Active Check
+* Customer Exists Check
+* Receiver Account Verification
+* Duplicate Customer Prevention
+* Duplicate Account Prevention
+
+---
+
+## Security Validation
+
+* PIN Validation
+* UPI ID Validation
+* Menu Choice Validation
+* Confirmation Before Critical Operations
+
+---
+
+# 💳 Deposit Workflow
+
+```text
+Customer
+    │
+    ▼
+Enter Deposit Amount
+    │
+    ▼
+Validate Amount
+    │
+    ▼
+Choose Deposit Method
+    │
+    ▼
+Generate Transaction
+    │
+    ▼
+Update Balance
+    │
+    ▼
+Save JSON
+    │
+    ▼
+Display Success Screen
+```
+
+---
+
+# 💸 Withdrawal Workflow
+
+```text
+Customer
+    │
+    ▼
+Enter Withdrawal Amount
+    │
+    ▼
+Validate Amount
+    │
+    ▼
+Check Minimum Balance
+    │
+    ▼
+Check Daily Limit
+    │
+    ▼
+Choose Withdrawal Method
+    │
+    ▼
+Update Balance
+    │
+    ▼
+Save Transaction
+    │
+    ▼
+Generate Notification
+```
+
+---
+
+# 🔄 Transfer Workflow
+
+```text
+Sender
+   │
+   ▼
+Enter Receiver Account
+   │
+   ▼
+Validate Receiver
+   │
+   ▼
+Enter Amount
+   │
+   ▼
+Validate Balance
+   │
+   ▼
+Confirm Transfer
+   │
+   ▼
+Update Sender Balance
+   │
+   ▼
+Update Receiver Balance
+   │
+   ▼
+Create Transaction
+   │
+   ▼
+Generate Notifications
+   │
+   ▼
+Save JSON
+```
+
+---
+
+# 📨 Request Workflow
+
+```text
+Customer
+    │
+    ▼
+Submit Request
+    │
+    ▼
+Store Request
+    │
+    ▼
+Pending Status
+    │
+    ▼
+Admin Reviews Request
+       │
+       ├── Approve
+       │      │
+       │      ▼
+       │   Update Data
+       │      │
+       │      ▼
+       │   Generate Notification
+       │
+       └── Reject
+              │
+              ▼
+       Generate Notification
+```
+
+---
+
+# 📊 Project Highlights
+
+* Complete Object-Oriented Design
+* JSON-Based Persistent Storage
+* Multiple Banking Operations
+* Customer & Admin Modules
+* Request Approval System
+* Notification Management
+* Transaction History
+* Realistic Banking Workflow
+* Secure Validation Mechanism
+* Menu-Driven Interface
+* Modular Function Design
+* Clean Data Persistence
+* Extensive Input Validation
+
+---
+
+# 📈 Software Engineering Concepts Applied
+
+The project demonstrates the practical implementation of several software engineering principles:
+
+* Separation of Responsibilities
+* Data Persistence
+* Reusable Functions
+* Modular Method Design
+* Encapsulation Using Classes
+* Business Logic Separation
+* Input Validation Layer
+* Authentication Layer
+* Transaction Processing
+* State Management
+* Error Handling
+* Consistent User Experience
+
+This project closely resembles the backend workflow of a simplified real-world banking application and serves as a strong learning foundation for future web and database-driven systems.
+
+
+# 🚀 Future Enhancements
+
+Although this project is fully functional as a console-based banking application, there are several enhancements that can be implemented in future versions.
+
+## Web Application
+
+* Develop a modern web interface using Streamlit
+* Convert the project into a Flask application
+* Build a Django-based banking portal
+* Responsive user interface
+
+---
+
+## Database Integration
+
+Replace JSON with relational databases such as:
+
+* MySQL
+* PostgreSQL
+* Microsoft SQL Server
+* SQLite
+
+---
+
+## Security Improvements
+
+* Password Hashing
+* PIN Encryption
+* OTP Verification
+* Two-Factor Authentication (2FA)
+* Email Verification
+* Mobile Number Verification
+* CAPTCHA
+* Session Timeout
+* Login Attempt Limitation
+
+---
+
+## Banking Features
+
+Future banking modules may include:
+
+* ATM Card Management
+* Debit Card Services
+* Credit Card Services
+* Loan Management
+* EMI Calculator
+* Interest Calculation
+* Fixed Deposit (FD)
+* Recurring Deposit (RD)
+* Internet Banking
+* Mobile Banking
+* QR Code Payments
+* Scheduled Transfers
+* Standing Instructions
+* Beneficiary Management
+* Mini Statement
+* Passbook Generation
+* PDF Statement Download
+
+---
+
+## Administrative Features
+
+Future administrator capabilities may include:
+
+* Multi-Administrator Support
+* Role-Based Access Control
+* Employee Management
+* Branch Management
+* Audit Logs
+* User Activity Logs
+* Dashboard Analytics
+* Transaction Reports
+* Customer Reports
+* Revenue Reports
+* Backup & Restore
+* System Monitoring
+
+---
+
+# 📚 Learning Outcomes
+
+This project helped strengthen practical knowledge in:
+
+## Python Programming
+
+* Functions
+* Modules
+* Classes
+* Objects
+* Exception Handling
+* File Handling
+* JSON Handling
+* Data Structures
+
+---
+
+## Object-Oriented Programming
+
+* Class Design
+* Object Creation
+* Encapsulation
+* Method Organization
+* Code Reusability
+
+---
+
+## Backend Development
+
+* Business Logic Implementation
+* Data Validation
+* Authentication
+* Transaction Processing
+* Persistent Storage
+* Request Processing
+* Notification System
+
+---
+
+## Software Design
+
+* Menu-Driven Applications
+* Workflow Design
+* Modular Programming
+* State Management
+* User Session Handling
+* Real-World Problem Solving
+
+---
+
+# 💡 Challenges Faced During Development
+
+Developing this project involved solving several real-world programming challenges.
+
+Some of the major challenges included:
+
+* Designing a complete banking workflow
+* Managing multiple JSON files
+* Maintaining data consistency
+* Preventing duplicate data
+* Handling account switching
+* Secure authentication
+* Request approval workflow
+* Notification management
+* Transaction processing
+* Input validation
+* Error handling
+* Maintaining application flow
+* Testing different banking scenarios
+* Building a scalable menu-driven application
+
+These challenges significantly improved understanding of backend application development and software design.
+
+---
+
+# 🧪 Testing
+
+The application has been tested for the following scenarios:
+
+## Customer Module
+
+* Customer Registration
+* Duplicate Registration
+* Login Validation
+* Invalid PIN
+* Invalid Customer ID
+* Multiple Accounts
+* Account Switching
+
+---
+
+## Deposit Module
+
+* Valid Deposit
+* Invalid Amount
+* Cash Deposit
+* UPI Deposit
+* Balance Update
+
+---
+
+## Withdrawal Module
+
+* Valid Withdrawal
+* Insufficient Balance
+* Daily Limit Check
+* Minimum Balance Validation
+* Cash Withdrawal
+* UPI Withdrawal
+
+---
+
+## Transfer Module
+
+* Valid Transfer
+* Invalid Receiver
+* Self Transfer Prevention
+* Balance Validation
+* Transaction Generation
+* Notification Generation
+
+---
+
+## Request Module
+
+* Phone Number Change
+* Address Change
+* Cheque Deposit
+* Cheque Withdrawal
+* Account Closure
+* Request Approval
+* Request Rejection
+
+---
+
+## Administrator Module
+
+* Login
+* Customer Search
+* Account Search
+* Transaction Search
+* Request Approval
+* Request Rejection
+
+---
+
+# 📸 Screenshots
+
+You can enhance this README by adding screenshots of the application.
+
+Suggested screenshots:
+
+* Main Menu
+* Customer Registration
+* Customer Login
+* Customer Dashboard
+* Deposit Screen
+* Withdrawal Screen
+* Transfer Screen
+* Transaction History
+* Notifications
+* Service Center
+* Admin Login
+* Admin Dashboard
+* Customer Management
+* Account Management
+* Transaction Management
+* Request Management
+
+Example:
+
+```text
+screenshots/
+│
+├── main_menu.png
+├── customer_dashboard.png
+├── deposit.png
+├── withdraw.png
+├── transfer.png
+├── admin_dashboard.png
+└── requests.png
+```
+
+---
+
+# 🎯 Skills Demonstrated
+
+This project demonstrates proficiency in:
+
+* Python Programming
+* Object-Oriented Programming
+* Backend Development
+* Business Logic Design
+* JSON Database Management
+* File Handling
+* Authentication Systems
+* Input Validation
+* Transaction Processing
+* Notification Systems
+* Request Management
+* Software Engineering Principles
+* Problem Solving
+* Debugging
+* Clean Code Organization
+
+---
+
+# 🌟 Project Highlights
+
+✔ Complete Banking Workflow
+
+✔ Customer & Administrator Modules
+
+✔ JSON-Based Persistent Storage
+
+✔ Multiple Banking Operations
+
+✔ Secure Authentication
+
+✔ Comprehensive Validation
+
+✔ Request Approval & Rejection System
+
+✔ Notification Management
+
+✔ Transaction Management
+
+✔ Realistic Banking Simulation
+
+✔ Extensive Menu-Driven Interface
+
+✔ Backend-Focused Application
+
+---
+
+# 👨‍💻 Author
+
+**Sandhyarani Bhola**
+
+Computer Science Student
+
+### Areas of Interest
+
+* Python Development
+* SQL
+* Data Science
+* Machine Learning
+* Artificial Intelligence
+* Backend Development
+* Software Engineering
+
+---
+
+# 🙏 Acknowledgements
+
+This project was developed as part of my continuous learning journey in Python and Object-Oriented Programming.
+
+Special thanks to the learning resources, instructors, documentation, and continuous practice that helped shape this project into a complete backend banking application.
+
+---
+
+# 📄 License
+
+This project is intended for educational and learning purposes.
+
+You are welcome to study the source code, understand the implementation, and use it as inspiration for your own learning.
+
+---
+
+# ⭐ Project Status
+
+**Project Status:** ✅ Completed
+
+This project successfully demonstrates a complete backend implementation of a Bank Management System using Python and JSON.
+
+The application includes customer management, administrator operations, banking transactions, service requests, notifications, authentication, validations, and persistent data storage.
+
+It serves as a strong foundation for future enhancements such as SQL database integration, web development using Flask/Django/Streamlit, REST APIs, and cloud deployment.
+
+---
+
+## 💬 Final Note
+
+Building this project has been an incredible learning experience that strengthened my understanding of software engineering, backend development, and object-oriented programming.
+
+Every module—from customer registration to transaction processing, request management, and administrator controls—was designed to simulate real-world banking workflows while emphasizing clean logic, validation, and maintainable code.
+
+This project marks an important milestone in my journey toward becoming a professional software engineer, and it serves as a solid foundation for developing larger, database-driven, and web-based applications in the future.
+
+**"Every completed project is not the end of learning—it is the beginning of building something even greater."**
